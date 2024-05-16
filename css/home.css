@@ -1,6 +1,8 @@
 body, #content {
     background: #212534;
-}
+    /* hidding scrollbar */
+    overflow: hidden;
+    }
 
 .section1 {
     width: 100%;

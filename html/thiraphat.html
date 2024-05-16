@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/js/tailwind.js"></script>
+    <link rel="stylesheet" href="/css/thiraphat.css">
     <title>Thiraphat PORTFOLIO</title>
 </head>
-<body class="bg-gray-200">
+<body class="bg-gray-200 overflow-hidden">
     <!-- <nav class="bg-gray-800 fixed w-screen top-0"> -->
-        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="position-fixed flex space-x-3 relative flex h-14 item-center justify-between">
-            <div class="flex text-white  w-screen ">
-                <a href="#first" class="text-center border-2 border-red-500 rounded w-1/3 hover:bg-gray-200 duration-1000 hover:text-red-500 mx-2 my-1"><button>Infos</button></a>
-                <a href="#second" class="text-center border-2 border-red-500 rounded w-1/3 hover:bg-gray-200 duration-1000 hover:text-red-500 mx-2 my-1"><button>skill</button></a>
-                <a href="#third" class="text-center border-2 border-red-500 rounded w-1/3 hover:bg-gray-200 duration-1000 hover:text-red-500 mx-2 my-1"><button>contact</button></a>
-            </div>
+          <div class="flex text-white w-screen position-fixed">
+            <a href="#first" class="text-center border-2 border-red-500 rounded w-1/3 hover:bg-gray-200 duration-1000 hover:text-red-500 mx-2 my-1"><button>Infos</button></a>
+            <a href="#second" class="text-center border-2 border-red-500 rounded w-1/3 hover:bg-gray-200 duration-1000 hover:text-red-500 mx-2 my-1"><button>skill</button></a>
+            <a href="#third" class="text-center border-2 border-red-500 rounded w-1/3 hover:bg-gray-200 duration-1000 hover:text-red-500 mx-2 my-1"><button>contact</button></a>
+          </div>
         </div>
-        </div>
+      </div>
     <!-- </nav> -->
 
     <div class="text-center my-2 content">
@@ -25,8 +26,8 @@
     </div>
 
     <div id="first" class="flex justify-around my-2 p-1">
-        <div class="border-2 border-purple-300 w-1/4 rounded-xl">
-            <img class="rounded-xl" src="https://i.pinimg.com/564x/94/83/70/94837059e8e40a9ec7d6ff162806317a.jpg" alt="the_cat1">
+        <div onclick="swapcat()" id="catt1" class="border-2 border-purple-300 w-1/4 rounded-xl">
+            <img id="cat1" class="rounded-xl" src="https://i.pinimg.com/564x/94/83/70/94837059e8e40a9ec7d6ff162806317a.jpg" alt="the_cat1">
             <div class="p-2">
                 <h1 class="text-lg font-bold">Thiraphat Suksamosorn</h1>
                 <p class="text-xs">
@@ -34,8 +35,8 @@
                 </p>
             </div>
         </div>
-        <div class="border-2 border-purple-300 w-1/4 rounded-xl mx-2">
-            <img class="rounded-xl" src="https://i.pinimg.com/564x/92/ad/08/92ad0888f5f2be0fb9572d5dff38285c.jpg" alt="the_cat2">
+        <div onclick="swapcat2()" class="border-2 border-purple-300 w-1/4 rounded-xl mx-2">
+            <img id="cat2" class="rounded-xl" src="https://i.pinimg.com/564x/92/ad/08/92ad0888f5f2be0fb9572d5dff38285c.jpg" alt="the_cat2">
             <div class="p-2">
                 <h1 class="text-lg font-bold">Thiraphat Suksamosorn</h1>
                 <p class="text-xs">
@@ -43,8 +44,8 @@
                 </p>
             </div>
         </div>
-        <div class="border-2 border-purple-300 w-1/4 rounded-xl">
-            <img class="rounded-xl" src="https://i.pinimg.com/564x/2a/c9/59/2ac959f0dc65a8821c7634a2359e5509.jpg" alt="the_cat3">
+        <div onclick="swapcat3()" class="border-2 border-purple-300 w-1/4 rounded-xl">
+            <img id="cat3" class="rounded-xl" src="https://i.pinimg.com/564x/2a/c9/59/2ac959f0dc65a8821c7634a2359e5509.jpg" alt="the_cat3">
             <div class="p-2">
                 <h1 class="text-lg font-bold">Thiraphat Suksamosorn</h1>
                 <p class="text-xs">
@@ -98,18 +99,61 @@
     </div>
     <div id="third" class="text-center my-2 p-1">
         <h1 class="text-3xl font-bold text-clifford text-gray-300">contact</h1>
-        <div class="flex justify-around">
+        <div class="flex justify-around my-6">
           <br>
           <a href="https://www.linkedin.com/in/thiraphat-S">
             <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png" alt="linkedin" width="100vw">
           </a><br>
-          <a href="#">
-            <img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/112-gmail_email_mail-512.png" alt="email" width="100vw">
+          <a href="https://web.facebook.com/ThiraphatSuksamosorn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebook_icon.svg/2048px-Facebook_icon.svg.png" alt="face" width="100vw">
           </a><br>
           <a href="https://github.com/API65015077">
             <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github" width="100vw">
           </a><br>
         </div>
     </div>
+
+    <script>
+      function swapcat() {
+        var cat1 = document.getElementById("cat1");
+        
+        if (cat1.src == "https://i.pinimg.com/564x/83/df/2e/83df2e17eac96606598a21798e8ff89e.jpg") {
+          cat1.style.transform = "rotate(360deg)";
+          cat1.style.transition = "all 1s";
+          cat1.src = "https://i.pinimg.com/564x/94/83/70/94837059e8e40a9ec7d6ff162806317a.jpg";
+        } else {
+          cat1.style.transform = "rotate(-360deg)";
+          cat1.style.transition = "all 1s";
+          cat1.src = "https://i.pinimg.com/564x/83/df/2e/83df2e17eac96606598a21798e8ff89e.jpg";
+        }}
+
+      function swapcat2() {
+          var cat2 = document.getElementById("cat2");
+
+          if (cat2.src == "https://i.pinimg.com/564x/92/ad/08/92ad0888f5f2be0fb9572d5dff38285c.jpg") {
+            cat2.style.transform = "rotate(360deg)";
+            cat2.style.transition = "all 1s";
+            cat2.src = "https://i.pinimg.com/564x/01/3f/01/013f010043a89a1abc898b1ec2638801.jpg";
+          } else {
+            cat2.style.transform = "rotate(-360deg)";
+            cat2.style.transition = "all 1s";
+            cat2.src = "https://i.pinimg.com/564x/92/ad/08/92ad0888f5f2be0fb9572d5dff38285c.jpg";
+          }}
+
+      function swapcat3() {
+          var cat3 = document.getElementById("cat3");
+
+          if (cat3.src == "https://i.pinimg.com/564x/2a/c9/59/2ac959f0dc65a8821c7634a2359e5509.jpg") {
+            cat3.style.transform = "rotate(360deg)";
+            cat3.style.transition = "all 1s";
+            cat3.src = "https://i.pinimg.com/564x/f5/9a/dd/f59add775fc675d8a15c71ac6ef514d8.jpg";
+          } else {
+            cat3.style.transform = "rotate(-360deg)";
+            cat3.style.transition = "all 1s";
+            cat3.src = "https://i.pinimg.com/564x/2a/c9/59/2ac959f0dc65a8821c7634a2359e5509.jpg";
+          }
+        }
+      
+    </script>
 </body>
 </html>
