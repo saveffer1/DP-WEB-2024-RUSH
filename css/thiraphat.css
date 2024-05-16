@@ -1,3 +1,29 @@
 body {
     overflow: hidden;
 }
+
+.fixed-buttons {
+    position: fixed;
+    top: 50px; /* ระยะห่างจากด้านบนของจอ */
+    left: 10px; /* ระยะห่างจากด้านซ้ายของจอ */
+    display: flex;
+    flex-direction: column;
+}
+
+.fixed-buttons button {
+    margin: 5px 0;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.fixed-buttons button:hover {
+    background-color: #45a049;
+}
+
+.content {
+    margin-left: 200px; /* เพิ่มระยะห่างจากด้านซ้ายเพื่อให้เห็นปุ่มชัดเจน */
+    padding: 20px;
+}

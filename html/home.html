@@ -32,18 +32,18 @@
 
     <script>
       $(document).ready(function() {
-    function scrollToSection2() {
-        $('html, body').animate({
-            scrollTop: $('#section_hidden').offset().top
-        }, 1000);
-    }
+        function scrollToSection2() {
+            $('html, body').animate({
+                scrollTop: $('#section_hidden').offset().top
+            }, 1000);
+        }
 
-    scrollToSection2();
-
-    $(window).on('load', function() {
         scrollToSection2();
-    });
-});
+
+        $(window).on('load', function() {
+            scrollToSection2();
+        });
+      });
 
 
 

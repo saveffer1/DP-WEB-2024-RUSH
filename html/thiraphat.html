@@ -9,23 +9,28 @@
     <title>Thiraphat PORTFOLIO</title>
 </head>
 <body class="bg-gray-200 overflow-hidden">
-    <!-- <nav class="bg-gray-800 fixed w-screen top-0"> -->
+    <!-- <nav class="border-gray-200 dark:bg-gray-900 w-full fixed top-0">
       <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="position-fixed flex space-x-3 relative flex h-14 item-center justify-between">
           <div class="flex text-white w-screen position-fixed">
-            <a href="#first" class="text-center border-2 border-red-500 rounded w-1/3 hover:bg-gray-200 duration-1000 hover:text-red-500 mx-2 my-1"><button>Infos</button></a>
+            <a href="#hidden_layer" class="text-center border-2 border-red-500 rounded w-1/3 hover:bg-gray-200 duration-1000 hover:text-red-500 mx-2 my-1"><button>Infos</button></a>
             <a href="#second" class="text-center border-2 border-red-500 rounded w-1/3 hover:bg-gray-200 duration-1000 hover:text-red-500 mx-2 my-1"><button>skill</button></a>
             <a href="#third" class="text-center border-2 border-red-500 rounded w-1/3 hover:bg-gray-200 duration-1000 hover:text-red-500 mx-2 my-1"><button>contact</button></a>
           </div>
         </div>
       </div>
-    <!-- </nav> -->
-
-    <div class="text-center my-2 content">
+    </nav> -->
+    <!-- <div class="fixed-buttons">
+      <a href="#hidden_layer"><button>Infos</button></a>
+      <a href="#second"><button>Infos</button></a>
+      <a href="#third"><button>Infos</button></a>
+    </div> -->
+    <div id="hidden_layer" class="h-14"></div>
+    <div id="first" class="text-center my-2 content">
         <h1 class="text-3xl font-bold text-clifford text-red-500">PORTFOLIO</h1>
     </div>
 
-    <div id="first" class="flex justify-around my-2 p-1">
+    <div  class="flex justify-around my-2 p-1 mt-2">
         <div onclick="swapcat()" id="catt1" class="border-2 border-purple-300 w-1/4 rounded-xl">
             <img id="cat1" class="rounded-xl" src="https://i.pinimg.com/564x/94/83/70/94837059e8e40a9ec7d6ff162806317a.jpg" alt="the_cat1">
             <div class="p-2">
@@ -153,7 +158,7 @@
             cat3.src = "https://i.pinimg.com/564x/2a/c9/59/2ac959f0dc65a8821c7634a2359e5509.jpg";
           }
         }
-      
-    </script>
+
+        </script>
 </body>
 </html>
