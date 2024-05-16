@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parallax Animation</title>
+  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="../css/usercard.css">
+</head>
+<body>
+    <div class="section1">
+      <div class="rain"></div>
+      <h1>Link Start</h1>
+    </div>
+
+    <div class="section2">
+      <div class="usercard">
+        Magic Card
+      </div>
+    </div>
+
+  <script>
+    
+  </script>
+
+  <script>
+    const rainContainer = document.querySelector(".rain");
+    const numberOfDrops = 200;
+
+    const colors = [
+      "#FF0000", // Red
+      "#FFA500", // Orange
+      "#FFFF00", // Yellow
+      "#008000", // Green
+      "#0000FF", // Blue
+      "#4B0082", // Indigo
+      "#EE82EE"  // Violet
+    ];
+
+    const layers = [
+      { className: 'layer1', size: '2px', duration: '10s' },
+      { className: 'layer2', size: '4px', duration: '8s' },
+      { className: 'layer3', size: '6px', duration: '6s' },
+      { className: 'layer4', size: '8px', duration: '4s' }
+    ];
+
+    for (let i = 0; i < numberOfDrops; i++) {
+      const drop = document.createElement("div");
+      drop.classList.add("raindrop");
+
+      // Randomize position, delay, and color
+      drop.style.left = `${Math.random() * 100}%`;
+      drop.style.animationDelay = `${Math.random() * 5}s`;
+      drop.style.background = colors[Math.floor(Math.random() * colors.length)];
+
+      // Assign a random layer class and size based on layer
+      const layer = layers[Math.floor(Math.random() * layers.length)];
+      drop.classList.add(layer.className);
+      drop.style.width = layer.size;
+      drop.style.height = layer.size;
+
+      rainContainer.appendChild(drop);
+    }
+  </script>
+</body>
+</html>
