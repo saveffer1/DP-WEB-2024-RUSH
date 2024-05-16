@@ -1,4 +1,4 @@
-const tailwindcdnlink = "https://cdn.tailwindcss.com";
+// const tailwindcdnlink = "https://cdn.tailwindcss.com";
 
 function initTailwindScript(source){
     const tailwindScript = document.createElement('script');
@@ -7,7 +7,7 @@ function initTailwindScript(source){
 }
 
 // tailwind configuration
-tailwindScript = initTailwindScript(tailwindcdnlink);
+tailwindScript = initTailwindScript("https://cdn.tailwindcss.com");
 tailwindScript.onload = function(){
     // add custom tailwind configuration here
     window.tailwind.config = {
