@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Parallax Animation</title>
   <link rel="stylesheet" href="../css/home.css">
-  <link rel="stylesheet" href="../css/usercard.css">
 </head>
 <body>
     <div class="section1">
@@ -13,10 +12,11 @@
       <h1>Link Start</h1>
     </div>
 
-    <div class="section2">
-      <div class="usercard">
-        Magic Card
+    <div class="section2 flex mb-4">
+      <div class="w-1/2 h-96 place-content-center bg-gray-300">
+        <img src="https://images.unsplash.com/photo-1632216820004-3b3b3b3b3b3b" alt="image" class="w-full h-full object-cover">
       </div>
+      <div class="w-1/2 h-96 bg-gray-400"></div>
     </div>
 
   <script>
@@ -24,43 +24,44 @@
   </script>
 
   <script>
-    const rainContainer = document.querySelector(".rain");
-    const numberOfDrops = 200;
+    function raindrop() {
+      const colors = [
+        "#FF0000",
+        "#FFA500",
+        "#FFFF00",
+        "#008000",
+        "#0000FF",
+        "#4B0082",
+        "#EE82EE"
+      ];
 
-    const colors = [
-      "#FF0000", // Red
-      "#FFA500", // Orange
-      "#FFFF00", // Yellow
-      "#008000", // Green
-      "#0000FF", // Blue
-      "#4B0082", // Indigo
-      "#EE82EE"  // Violet
-    ];
+      const layers = [
+        { className: 'layer1', size: '2px', duration: '10s' },
+        { className: 'layer2', size: '4px', duration: '8s' },
+        { className: 'layer3', size: '6px', duration: '6s' },
+        { className: 'layer4', size: '8px', duration: '4s' }
+      ];
 
-    const layers = [
-      { className: 'layer1', size: '2px', duration: '10s' },
-      { className: 'layer2', size: '4px', duration: '8s' },
-      { className: 'layer3', size: '6px', duration: '6s' },
-      { className: 'layer4', size: '8px', duration: '4s' }
-    ];
+      for (let i = 0; i < 200; i++) {
+        const drop = document.createElement("div");
+        drop.classList.add("raindrop");
 
-    for (let i = 0; i < numberOfDrops; i++) {
-      const drop = document.createElement("div");
-      drop.classList.add("raindrop");
+        // Randomize position, delay, and color
+        drop.style.left = `${Math.random() * 100}%`;
+        drop.style.animationDelay = `${Math.random() * 5}s`;
+        drop.style.background = colors[Math.floor(Math.random() * colors.length)];
 
-      // Randomize position, delay, and color
-      drop.style.left = `${Math.random() * 100}%`;
-      drop.style.animationDelay = `${Math.random() * 5}s`;
-      drop.style.background = colors[Math.floor(Math.random() * colors.length)];
+        // Assign a random layer class and size based on layer
+        const layer = layers[Math.floor(Math.random() * layers.length)];
+        drop.classList.add(layer.className);
+        drop.style.width = layer.size;
+        drop.style.height = layer.size;
 
-      // Assign a random layer class and size based on layer
-      const layer = layers[Math.floor(Math.random() * layers.length)];
-      drop.classList.add(layer.className);
-      drop.style.width = layer.size;
-      drop.style.height = layer.size;
-
-      rainContainer.appendChild(drop);
+        document.querySelector(".rain").appendChild(drop);
+      }
     }
+    raindrop();
   </script>
+
 </body>
 </html>
