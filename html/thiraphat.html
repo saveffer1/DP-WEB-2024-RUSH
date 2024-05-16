@@ -8,9 +8,9 @@
     <title>Thiraphat PORTFOLIO</title>
 </head>
 <body class="bg-gray-200">
-    <nav class="bg-gray-800 fixed w-screen top-0">
+    <!-- <nav class="bg-gray-800 fixed w-screen top-0"> -->
         <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div class="flex space-x-3 relative flex h-14 item-center justify-between">
+        <div class="position-fixed flex space-x-3 relative flex h-14 item-center justify-between">
             <div class="flex text-white  w-screen ">
                 <a href="#first" class="text-center border-2 border-red-500 rounded w-1/3 hover:bg-gray-200 duration-1000 hover:text-red-500 mx-2 my-1"><button>Infos</button></a>
                 <a href="#second" class="text-center border-2 border-red-500 rounded w-1/3 hover:bg-gray-200 duration-1000 hover:text-red-500 mx-2 my-1"><button>skill</button></a>
@@ -18,15 +18,13 @@
             </div>
         </div>
         </div>
-    </nav>
-
-    <br><br><br>
+    <!-- </nav> -->
 
     <div class="text-center my-2 content">
-        <h1 class="text-5xl font-bold text-clifford">PORTFOLIO</h1>
+        <h1 class="text-3xl font-bold text-clifford text-red-500">PORTFOLIO</h1>
     </div>
 
-    <div id="first" class="flex justify-center my-2 p-1">
+    <div id="first" class="flex justify-around my-2 p-1">
         <div class="border-2 border-purple-300 w-1/4 rounded-xl">
             <img class="rounded-xl" src="https://i.pinimg.com/564x/94/83/70/94837059e8e40a9ec7d6ff162806317a.jpg" alt="the_cat1">
             <div class="p-2">
@@ -58,8 +56,8 @@
     </div>
     <div id="second" class="text-center my-8 p-1">
         <!-- <h1>My Skills</h1> -->
-        <h1>Languages ,Tools and Frameworks</h1>
-        <div class="grid grid-rows-1 grid-flow-col gap-4 justify-items-center my-3">
+        <h1 class="text-3xl font-bold text-clifford text-cyan-800">Languages ,Tools and Frameworks</h1>
+        <div class="grid grid-rows-1 grid-flow-col gap-4 justify-items-center items-center my-3">
             <div class="item-center">
                 <a href="https://www.typescriptlang.org/docs/" target="_blank">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png" alt="TS" width="100vw">
@@ -98,11 +96,20 @@
             </div>
         </div>
     </div>
-    <div id="third" class="text-center border-2 border-gray-300 my-2 p-1">
-        <h1>contact</h1>
-        <a href="https://www.linkedin.com/in/thiraphat-S">https://www.linkedin.com/in/thiraphat-S</a><br>
-        <a href="https://github.com/API65015077">https://github.com/API65015077</a><br>
-        <a href="#">thiraphat.pai@gmail.com</a>
+    <div id="third" class="text-center my-2 p-1">
+        <h1 class="text-3xl font-bold text-clifford text-gray-300">contact</h1>
+        <div class="flex justify-around">
+          <br>
+          <a href="https://www.linkedin.com/in/thiraphat-S">
+            <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png" alt="linkedin" width="100vw">
+          </a><br>
+          <a href="#">
+            <img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/112-gmail_email_mail-512.png" alt="email" width="100vw">
+          </a><br>
+          <a href="https://github.com/API65015077">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github" width="100vw">
+          </a><br>
+        </div>
     </div>
 </body>
 </html>
