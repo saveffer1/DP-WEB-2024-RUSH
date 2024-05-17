@@ -1,3 +1,14 @@
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -99,3 +110,61 @@ body, html {
       transform: translateY(-5px);
     }
   }
+
+  #imageframe img:hover{
+    transform: scale(1.1);
+    transition: 0.2s;
+    /* box-shadow: 0 0 #000, 0 0 #000, 0 0 #000; */
+  }
+
+  #imageframe img:active{
+    transform: scale(1.0);
+    transition: 0.2s;
+  }
+  
+  .starry-sky {
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: 
+        50px 80px #fff, 200px 150px #fff, 400px 90px #fff,
+        600px 200px #fff, 800px 50px #fff, 1000px 300px #fff,
+        1200px 400px #fff, 1400px 100px #fff, 1600px 500px #fff,
+        1800px 250px #fff, 50px 700px #fff, 200px 650px #fff,
+        400px 750px #fff, 600px 900px #fff, 800px 850px #fff,
+        1000px 800px #fff, 1200px 950px #fff, 1400px 1000px #fff,
+        1600px 1050px #fff, 1800px 1150px #fff;
+    animation: twinkle 2s infinite ease-in-out
+  }
+
+  @keyframes twinkle {
+      0%, 100% { opacity: 0.8; }
+      50% { opacity: 0.2; }
+  }
+
+  .fixed-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #3490dc;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.fixed-button:hover {
+    background-color: #1d72b8;
+}
+
+@media (max-width: 639px) {
+  .fixed-button {
+      display: none;
+  }
+}

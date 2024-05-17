@@ -91,6 +91,27 @@ body {
     transition: transform 0.3s ease;
 }
 
+@media screen and (max-width: 768px) {
+    #profile1 {
+        object-position: 35%;
+    }
+    
+    #profile2 {
+        object-position: 75%;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    #profile1 {
+        object-position: 15%;
+    }
+    
+    #profile2 {
+        object-position: 95%;
+    }
+}
+
+
 .caption {
     position: absolute;
     bottom: 0;
