@@ -1,11 +1,11 @@
 body {
-    overflow: hidden;
+    background: #212534
 }
 
-.fixed-buttons {
+/* .fixed-buttons {
     position: fixed;
-    top: 50px; /* ระยะห่างจากด้านบนของจอ */
-    left: 10px; /* ระยะห่างจากด้านซ้ายของจอ */
+    top: 50px; 
+    left: 10px; 
     display: flex;
     flex-direction: column;
 }
@@ -24,6 +24,6 @@ body {
 }
 
 .content {
-    margin-left: 200px; /* เพิ่มระยะห่างจากด้านซ้ายเพื่อให้เห็นปุ่มชัดเจน */
+    margin-left: 200px; 
     padding: 20px;
-}
+} */
