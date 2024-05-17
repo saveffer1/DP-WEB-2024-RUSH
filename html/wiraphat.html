@@ -1,12 +1,75 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wiraphat Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../css/wiraphat.css">
+</head>
 <body>
-    <h1 class="text-3xl font-bold underline text-clifford">
-        Wiraphat
-    </h1>
+  <header class="h-16 bg-gray-900 text-white flex items-center justify-center fixed top-0 left-0 w-full z-10">
+    <!-- <h1 class="text-3xl">My Portfolio</h1> -->
+    <nav class="absolute right-0 top-0 h-full flex items-center">
+      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+      </button>
+      <div id="navbar-default" class="hidden md:flex md:space-x-4 p-5">
+        <a href="../index.html" class="hover:text-gray-300">Home</a>
+        <a href="./thiraphat.html" class="hover:text-gray-300">Next port</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="parallax">
+    <div class="parallax__layer parallax__layer--back"></div>
+    <div class="parallax__layer parallax__layer--front"></div>
+    <div class="scroll-down" id="scrollDown">
+      <span>Scroll Down</span>
+      <div class="arrow"></div>
+    </div>
+  </div>
+
+  <section id="about-me" class="section content">
+    <h2>About Me</h2>
+    <div id="imageframe">
+      <img class="w-1/6 m-5" src="../assets/images/wiraphat/2.jpg" alt="Wiraphat Prasomphong">
+    </div>
+    <p>Name: Wiraphat Prasomphong</p>
+    <p>Student: KMITL</p>
+    <p>Major: Computer Engineering</p>
+  </section>
+
+  <section id="certificates" class="section content">
+    <h2>Certificates</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel nulla ut risus tincidunt sollicitudin. Praesent ac orci vitae nisi commodo tempus.</p>
+  </section>
+
+  <section id="contact" class="section content">
+    <h2>Contact</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel nulla ut risus tincidunt sollicitudin. Praesent ac orci vitae nisi commodo tempus.</p>
+  </section>
+
+  <script>
+    document.querySelector('button[data-collapse-toggle]').addEventListener('click', function() {
+      var navMenu = document.getElementById('navbar-default');
+      navMenu.classList.toggle('hidden');
+    });
+
+    document.getElementById('scrollDown').addEventListener('click', function() {
+      document.getElementById('about-me').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    window.addEventListener('scroll', function() {
+      const scrolled = window.pageYOffset;
+      const parallaxBack = document.querySelector('.parallax__layer--back');
+      const parallaxFront = document.querySelector('.parallax__layer--front');
+
+      parallaxBack.style.transform = `translateY(${scrolled * 0.4}px) translateZ(-1px) scale(2)`;
+      parallaxFront.style.transform = `translateY(${scrolled * 0.2}px) translateZ(0px) scale(1.5)`;
+    });
+  </script>
 </body>
 </html>

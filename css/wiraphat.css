@@ -1,5 +1,101 @@
-body {
-    background: #212534;
-    color: #c4c3ca;
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
     overflow-x: hidden;
-}
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .parallax {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    background-color: #000;
+  }
+
+  .parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .parallax__layer--back {
+    background-image: url('../assets/images/wiraphat/parallax1.png');
+    z-index: 1;
+    transform: translateZ(-1px) scale(1.5);
+  }
+
+  .parallax__layer--front {
+    background-image: url('../assets/images/wiraphat/parallax2.png');
+    z-index: 2;
+    transform: translateZ(0px) scale(1);
+  }
+
+  #imageframe {
+    place-content: center;
+    display: flex;
+  }
+
+  .content {
+    padding: 100px 20px;
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    place-content: center;
+    place-items: center;
+  }
+
+  .content h2 {
+    font-size: 2.5rem;
+    color: #03dac5;
+  }
+
+  .content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    animation: fadeInUp 2s ease-in-out infinite;
+    z-index: 3;
+  }
+
+  .scroll-down span {
+    font-size: 1rem;
+    color: #03dac5;
+  }
+
+  .arrow {
+    margin-top: 10px;
+    width: 24px;
+    height: 24px;
+    border-right: 2px solid #03dac5;
+    border-bottom: 2px solid #03dac5;
+    transform: rotate(45deg);
+  }
+
+  @keyframes fadeInUp {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
